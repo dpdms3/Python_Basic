@@ -69,3 +69,62 @@ print(a)
 print(b)
 print(c)
 
+
+# 튜플 (Tuple) Ex: 기차
+# - list와 대부분 동일
+# - 시퀀스 자료형 (정렬 불가능)
+# - immutable (생성된 후 변경 불가능)
+# - index 사용 (slicing 가능)
+# - packing과 unpacking 가능
+# - () 사용 (생략 가능)
+# * 여러분이 직접 tuple를 생성하는 경우 x
+# -> 파이썬에서 결과값을 받을 때 Tuple로 제공
+
+a = [1, 2, 3]  # list
+b = (1, 2, 3)  # Tuple
+c = 1, 2, 3  # Tuple (괄호 생략 가능)
+
+a[0] = 99
+print(a)
+
+# b[0] = 99
+# print(b)  # Tuple은 값 변경
+
+# 튜플 원소가 1개인 경우
+a = (1, 2, 3)     # Tuple
+b = (1, 2, 3)     # Tuple
+c = (1)           # Tuple
+d = 1             # int
+e =1              # Tuple
+print(type(b))
+print(type(d))
+print(type(e))
+
+# a랑 b랑 바꾸기
+a = 5
+b = 8
+a,b = b,a  # Tuple Packing & unpacking 사용
+print(a)
+print(b)
+
+# 3. 세트(set) ex: 복주머니
+# - 수학의 집합 개념
+# - 순서 없음 (index 없음, 정렬 불가능)
+# - 중복값을 허용하지 않음 (매우 중요!!!!!)
+# - 멤버함수 : union(), intersection(), difference() 등등
+# - {} 사용
+
+set_a = {1, 2, 3}
+set_b = {1, 1, 1, 1, 2, 2, 2, 3, 3, 4, 5}
+print(set_b)  # set_b 에서 중복값 제거 해줌
+
+# 중복값 제거 활용 방법
+a = ["A", "A", "B", "B", "B", "C", "C", "D", "E"]  #List type
+
+a = set(a)  # list type을 set type으로 변환
+print(a)  # set로 나오게됨
+
+a = list(a)  # set타입을 list타입으로 바꿈
+print(a)  # list 타입으로 나오게 됨
+
+a = list(set(b))  # set type으로 변환하고 (중복값 제거 위해) -> list type로 다시 변환
