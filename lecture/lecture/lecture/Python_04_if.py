@@ -25,7 +25,7 @@
 
 #조건문 4가지 조합
 # 1. if
-# 2. if~elif~elif
+# 2. if~elif~else
 # 3. if~else
 # 4. if~elif~else
 
@@ -75,7 +75,7 @@ from datetime import datetime
 # input(): 키보드 값 입력 => String(문자열)
 born =  input("당신이 태어난 년도를 입력하세요: ")  # "2004"
 today = datetime.today().year
-age = today - int(born) + 1  # 2023 - 2004 = 19
+age = today - (int)born  # 2023 - 2004 = 19
 print(age)
 if 8 <=  age <= 26:
     if age >= 20:
